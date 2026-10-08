@@ -1,0 +1,28 @@
+{
+  "name": "eximagent",
+  "displayName": "EximAgent",
+  "version": "0.1.0",
+  "description": "Trade intelligence for exporters and importers: find importers and buyers from customs shipment records, look up HS codes and tariffs, screen names against OFAC sanctions, and draft outreach that is sent only after you confirm.",
+  "author": {
+    "name": "EximAgent",
+    "email": "support@eximagent.ai"
+  },
+  "homepage": "https://eximagent.ai",
+  "repository": "https://github.com/EximAgent/cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "eximagent",
+    "export",
+    "import",
+    "international-trade",
+    "customs-data",
+    "hs-code",
+    "tariff",
+    "sanctions-screening",
+    "buyer-discovery",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "eximagent": {
+      "url": "https://mcp.eximagent.ai/mcp"
+    }
+  }
+}
