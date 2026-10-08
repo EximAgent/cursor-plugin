@@ -1,7 +1,7 @@
 {
   "name": "eximagent",
   "displayName": "EximAgent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Trade intelligence for exporters and importers: find importers and buyers from customs shipment records, look up HS codes and tariffs, screen names against OFAC sanctions, and draft outreach that is sent only after you confirm.",
   "author": {
     "name": "EximAgent",

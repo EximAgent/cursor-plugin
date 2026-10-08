@@ -18,6 +18,7 @@ Every result says how sure it is: verified, extracted, heuristic or inferred.
 | --- | --- |
 | `mcp.json` | Connects to the hosted EximAgent connector at `https://mcp.eximagent.ai/mcp` (streamable HTTP, OAuth sign-in) |
 | `skills/eximagent` | Teaches the assistant to connect first, ask before guessing, preview anything that costs credits, and never send outreach without your yes |
+| `skills/eximagent-cli` | Teaches assistants that have a terminal to install and use the `eximagent` command-line tool with the same safety rules |
 
 ## Set up (about 2 minutes)
 
@@ -67,6 +68,14 @@ Full connector guide: https://eximagent.ai/docs/integrations/mcp
 - To disconnect, use your assistant's sign-out or remove-connector control. Removing the connector doesn't delete your
   saved EximAgent data.
 
+## Use the command-line tool
+
+If your assistant can run terminal commands (for example Grok Bot, Cursor's terminal, Claude Code or Codex), it can also use
+the `eximagent` command-line tool. This helps when the connector isn't set up, or for scripts and long lists. The
+[`eximagent-cli` skill](skills/eximagent-cli/SKILL.md) tells the assistant how to install it with the official installer,
+let you sign in yourself, run the main commands, and preview anything that costs credits before running it. You sign in
+in your own browser. Never paste a password or token into the chat.
+
 ## Help
 
 - Docs: https://eximagent.ai/docs
@@ -75,7 +84,7 @@ Full connector guide: https://eximagent.ai/docs/integrations/mcp
 
 ## License
 
-The files in this repository (manifest, MCP config, skill and README) are released under the MIT License. See
+The files in this repository (manifest, MCP config, skills and README) are released under the MIT License. See
 [LICENSE](LICENSE).
 Using the EximAgent service is governed by the [EximAgent Terms](https://eximagent.ai/policies/terms) and
 [Privacy Policy](https://eximagent.ai/policies/privacy).
