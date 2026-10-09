@@ -1,6 +1,6 @@
 # EximAgent plugin
 
-Trade intelligence for exporters and importers, inside your AI assistant.
+EximAgent is a team of AI agents for the export-import industry, connected to Claude, Cursor and other AI clients through one MCP connector. Outbound finds importers and buyers and writes personalized outreach. Analyst digs into trade data: market size, price trends, trade flows and company profiles. Compliance handles HS classification, tariffs, landed cost and OFAC screening.
 
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
 
@@ -45,6 +45,16 @@ If EximAgent doesn't show up in Connect Apps yet, ask your Bot:
 - **Claude Code:** `claude mcp add --transport http eximagent https://mcp.eximagent.ai/mcp --scope user`, then run `/mcp` to sign in.
 - **Codex:** `codex mcp add eximagent --url https://mcp.eximagent.ai/mcp`, then `codex mcp login eximagent`.
 - **Claude desktop or web:** Settings → Connectors → Add custom connector → `https://mcp.eximagent.ai/mcp`.
+
+### Skills only (any agent that supports Agent Skills)
+
+Add the two EximAgent skills to Claude Code, Codex, Cursor and 70+ other agents with the open-source [`skills` CLI](https://skills.sh):
+
+```bash
+npx skills add EximAgent/cursor-plugin
+```
+
+To add one skill only, use `--skill eximagent` (for the connector) or `--skill eximagent-cli` (for the command-line tool). The skills work together with the EximAgent connector or the `eximagent` CLI.
 
 Full connector guide: https://eximagent.ai/docs/integrations/mcp
 
