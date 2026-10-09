@@ -8,7 +8,7 @@ Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to
 - look up HS codes, tariffs and duties for a trade lane
 - screen company or person names against the OFAC sanctions list
 - research a company from its website
-- draft outreach emails that are **only sent after you say yes**
+- write personalized outreach emails to the buyers it finds
 
 Every result says how sure it is: verified, extracted, heuristic or inferred.
 
@@ -17,13 +17,12 @@ Every result says how sure it is: verified, extracted, heuristic or inferred.
 | Part | What it does |
 | --- | --- |
 | `mcp.json` | Connects to the hosted EximAgent connector at `https://mcp.eximagent.ai/mcp` (streamable HTTP, OAuth sign-in) |
-| `skills/eximagent` | Teaches the assistant to connect first, ask before guessing, preview anything that costs credits, and never send outreach without your yes |
-| `skills/eximagent-cli` | Teaches assistants that have a terminal to install and use the `eximagent` command-line tool with the same safety rules |
+| `skills/eximagent` | Teaches the assistant to use the EximAgent connector: which agent and tool to use for prospecting, trade data analysis and compliance checks |
+| `skills/eximagent-cli` | Teaches assistants that have a terminal to install and use the `eximagent` command-line tool |
 
 ## Set up (about 2 minutes)
 
-You need an EximAgent account. There's a free plan and no card is needed. See [pricing](https://eximagent.ai/pricing).
-You sign in with Google. There's no API key to copy or paste.
+You need an EximAgent account. See [pricing](https://eximagent.ai/pricing).
 
 ### Cursor
 
