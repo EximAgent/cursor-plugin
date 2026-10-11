@@ -1,5 +1,7 @@
 # EximAgent plugin
 
+[![skills.sh](https://skills.sh/b/EximAgent/cursor-plugin)](https://skills.sh/EximAgent/cursor-plugin)
+
 EximAgent is a team of AI agents for the export-import industry, connected to Claude, Cursor and other AI clients through one MCP connector. Outbound finds importers and buyers and writes personalized outreach. Analyst digs into trade data: market size, price trends, trade flows and company profiles. Compliance handles HS classification, tariffs, landed cost and OFAC screening.
 
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
