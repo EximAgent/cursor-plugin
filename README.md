@@ -6,9 +6,7 @@ EximAgent is a team of AI agents for the export-import industry, connected to Cl
 
 **An AI sales team for export-import:** Outbound, Analyst and Compliance, in Claude Code, Cursor and other AI clients. Free to start.
 
-![EximAgent Outbound finding importers and drafting outreach in an AI client](assets/demo.gif)
-
-![EximAgent CLI looking up HS codes for green coffee](assets/cli-hscode-search.webp)
+![EximAgent finding US importers of Colombian green coffee and profiling one buyer](assets/demo.gif)
 
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
 
