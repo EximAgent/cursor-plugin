@@ -4,6 +4,10 @@
 
 EximAgent is a team of AI agents for the export-import industry, connected to Claude, Cursor and other AI clients through one MCP connector. Outbound finds importers and buyers and writes personalized outreach. Analyst digs into trade data: market size, price trends, trade flows and company profiles. Compliance handles HS classification, tariffs, landed cost and OFAC screening.
 
+**An AI sales team for export-import:** Outbound, Analyst and Compliance, in Claude Code, Cursor and other AI clients. Free to start.
+
+![EximAgent finding US importers of Colombian green coffee and profiling one buyer](assets/demo.gif)
+
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
 
 - find importers, buyers and distributors from real customs shipment records
@@ -11,8 +15,6 @@ Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to
 - screen company or person names against the OFAC sanctions list
 - research a company from its website
 - write personalized outreach emails to the buyers it finds
-
-Every result says how sure it is: verified, extracted, heuristic or inferred.
 
 ## What's inside
 
@@ -28,28 +30,32 @@ You need an EximAgent account. See [pricing](https://eximagent.ai/pricing).
 
 ### Cursor
 
-1. Install **EximAgent** from the Cursor Marketplace.
-2. Open the plugin's `eximagent` server and choose **Connect** (or **Authenticate**).
-3. Sign in with Google in the browser window that opens.
+Add the hosted connector to `~/.cursor/mcp.json`:
 
-### Grok Bot
+```json
+{ "mcpServers": { "eximagent": { "url": "https://mcp.eximagent.ai/mcp" } } }
+```
 
-1. Open **Connect Apps** (formerly Marketplace) in the sidebar, find **EximAgent**, and choose **Add**.
-2. Choose **Authorize** and sign in with Google in your browser.
-3. In a chat, type `@` and pick EximAgent to attach it to a task.
+Then open Cursor's MCP settings, choose **Connect** on `eximagent`, and sign in with Google in the browser window that opens.
+If you already use the `eximagent` CLI and are signed in, `eximagent connect cursor` writes this config for you.
 
-If EximAgent doesn't show up in Connect Apps yet, ask your Bot:
-"Add a custom MCP server called eximagent at https://mcp.eximagent.ai/mcp". Then sign in from the connect card.
+### Claude Code
+
+```bash
+claude mcp add --transport http eximagent https://mcp.eximagent.ai/mcp --scope user
+```
+
+Then run `/mcp` in Claude Code and sign in with Google. (CLI users who are signed in can run `eximagent connect claude-code` instead.)
 
 ### Other assistants
 
-- **Claude Code:** `claude mcp add --transport http eximagent https://mcp.eximagent.ai/mcp --scope user`, then run `/mcp` to sign in.
+- **Grok Bot:** open **Connect Apps**, find **EximAgent**, choose **Add**, then sign in with Google.
 - **Codex:** `codex mcp add eximagent --url https://mcp.eximagent.ai/mcp`, then `codex mcp login eximagent`.
 - **Claude desktop or web:** Settings → Connectors → Add custom connector → `https://mcp.eximagent.ai/mcp`.
 
 ### Skills only (any agent that supports Agent Skills)
 
-Add the two EximAgent skills to Claude Code, Codex, Cursor and 70+ other agents with the open-source [`skills` CLI](https://skills.sh):
+Add the two EximAgent skills to Claude Code, Codex, Cursor and other agents with the open-source [`skills` CLI](https://skills.sh):
 
 ```bash
 npx skills add EximAgent/cursor-plugin
@@ -59,39 +65,41 @@ To add one skill only, use `--skill eximagent` (for the connector) or `--skill e
 
 Full connector guide: https://eximagent.ai/docs/integrations/mcp
 
-## Try it
+## What you can ask
 
-- "Which companies import green coffee into Germany? Show the scope and evidence behind the ranking."
-- "What HS code fits frozen shrimp?"
-- "What duty applies to coffee shipped from Vietnam to Germany?"
-- "Screen these three company names against sanctions."
-- "Find importers of my product in Germany, shortlist the best five, and draft a first email to each. Don't send anything."
+Outbound:
+- "Find importers of green coffee in Germany from customs shipment records and shortlist the best five."
+- "Research this buyer's website and write a personalized first email."
 
-## What it can change, and what it can't
+Analyst:
+- "How big is the US market for frozen shrimp imports, and who are the top importers?"
+- "Show the price trend and main trade routes for cashew nuts shipped into the Netherlands."
+
+Compliance:
+- "What HS code fits frozen shrimp, and what duty applies shipping it from Vietnam to Germany?"
+- "Screen these three company names against the OFAC sanctions list."
+
+## Access
 
 - Lookups (HS codes, tariffs, sanctions, trade questions) only read data.
-- Starting a buyer search, saving lists, enriching contacts, and drafting or sending emails change your account and can
-  use credits. The assistant is told to preview these and wait for your yes.
-- Emails are never sent unless you confirm. The service refuses to send to a sanctions-matched recipient.
-- Sanctions results are advisory. The final decision is yours.
 - The connector reads the account you sign in with and the EximAgent trade data. It does not read your files, your mail
   or your other connectors.
-- To disconnect, use your assistant's sign-out or remove-connector control. Removing the connector doesn't delete your
-  saved EximAgent data.
 
 ## Use the command-line tool
 
 If your assistant can run terminal commands (for example Grok Bot, Cursor's terminal, Claude Code or Codex), it can also use
 the `eximagent` command-line tool. This helps when the connector isn't set up, or for scripts and long lists. The
 [`eximagent-cli` skill](skills/eximagent-cli/SKILL.md) tells the assistant how to install it with the official installer,
-let you sign in yourself, run the main commands, and preview anything that costs credits before running it. You sign in
+let you sign in yourself, and run the main commands. You sign in
 in your own browser. Never paste a password or token into the chat.
 
 ## Help
 
 - Docs: https://eximagent.ai/docs
-- Support: support@eximagent.ai
+- Contact: brickai@eximagent.ai
 - Command-line tool (for developers): https://github.com/EximAgent/cli
+
+If this is useful, a star helps others find it. ⭐
 
 ## License
 
