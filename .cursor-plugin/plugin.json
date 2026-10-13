@@ -2,12 +2,12 @@
   "name": "eximagent",
   "displayName": "EximAgent",
   "version": "0.1.1",
-  "description": "Trade intelligence for exporters and importers: find importers and buyers from customs shipment records, look up HS codes and tariffs, screen names against OFAC sanctions, and draft outreach that is sent only after you confirm.",
+  "description": "EximAgent is a team of AI agents for the export-import industry, connected to Claude, Codex, Cursor and other AI tools through one connector, or used from the terminal with a CLI. Outbound finds importers and buyers and writes personalized outreach. Analyst digs into trade data: market size, price trends, trade flows and company profiles. Compliance handles HS classification, tariffs, landed cost and OFAC screening.",
   "author": {
     "name": "EximAgent",
     "email": "support@eximagent.ai"
   },
-  "homepage": "https://eximagent.ai",
+  "homepage": "https://eximagent.ai/connectors",
   "repository": "https://github.com/EximAgent/cursor-plugin",
   "license": "MIT",
   "logo": "assets/logo.svg",

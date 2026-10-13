@@ -63,7 +63,7 @@ npx skills add EximAgent/cursor-plugin
 
 To add one skill only, use `--skill eximagent` (for the connector) or `--skill eximagent-cli` (for the command-line tool). The skills work together with the EximAgent connector or the `eximagent` CLI.
 
-Full connector guide: https://eximagent.ai/docs/integrations/mcp
+Full connector guide: https://eximagent.ai/connectors
 
 ## What you can ask
 
