@@ -1,12 +1,14 @@
 # EximAgent plugin
 
-[![skills.sh](https://skills.sh/b/EximAgent/cursor-plugin)](https://skills.sh/EximAgent/cursor-plugin)
+[![skills.sh](https://skills.sh/b/EximAgent/cursor-plugin)](https://skills.sh/EximAgent/cursor-plugin) [![M8ven Score](https://m8ven.ai/badge/mcp/eximagent-cursor-plugin-xszrvz?v=2c89f784c4c9a543dee2901154d0d73e)](https://m8ven.ai/mcp/eximagent-cursor-plugin-xszrvz?s=readme)
 
 EximAgent is a team of AI agents for the export-import industry, connected to Claude, Cursor and other AI clients through one MCP connector. Outbound finds importers and buyers and writes personalized outreach. Analyst digs into trade data: market size, price trends, trade flows and company profiles. Compliance handles HS classification, tariffs, landed cost and OFAC screening.
 
 **An AI sales team for export-import:** Outbound, Analyst and Compliance, in Claude Code, Cursor and other AI clients. Free to start.
 
 ![EximAgent finding US importers of Colombian green coffee and profiling one buyer](assets/demo.gif)
+
+▶ [Watch the demo video on YouTube](https://youtu.be/AlSyk3_UadE)
 
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
 
