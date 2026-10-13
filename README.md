@@ -8,6 +8,8 @@ EximAgent is a team of AI agents for the export-import industry, connected to Cl
 
 ![EximAgent finding US importers of Colombian green coffee and profiling one buyer](assets/demo.gif)
 
+▶ [Watch the demo video on YouTube](https://youtu.be/AlSyk3_UadE)
+
 Ask in plain words, and your assistant uses [EximAgent](https://eximagent.ai) to:
 
 - find importers, buyers and distributors from real customs shipment records
